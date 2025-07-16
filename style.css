@@ -1,0 +1,20 @@
+body{
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    background-color: #f4f4f4;
+    margin: auto;
+    padding: 20px;
+}
+form, #Filters{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+button{
+    cursor:pointer;
+}
+ul li{
+    display:flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}

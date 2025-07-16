@@ -3,9 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Grocery App</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <h1>Grocery List</h1>
+    <form id="ItemForm">
+        <input type="text" id="Name" placeholder="Item Name" required>
+        <input type="Number" id="Quantity" placeholder="Quantity" min ="1"required>
+        <input type="Number"id="price" placeholder="Price" min ="0.01" step="0.01" required>
+        <select id="Category" required>
+            <option value="" disabled selected>Select Category</option>
+            <option value="Fruits">Fruits</option>
+            <option value="Vegetables">Vegetables</option>
+            <option value="Dairy">Dairy</option>
+            <option value="Bakery">Bakery</option>
+            <option value="Beverages">Beverages</option>
+            </select>
+            <button type="submit">Add Item</button>
+    </form>
+    <div id="Filters">
+        <button onclick="FilterItems('All')">All</button>
+        <button onclick="FilterItems('Dairy')">Dairy</button>
+        <button onclick="FilterItems('Fruits')">Fruits</button>
+        <button onclick="FilterItems('Vegetables')">Vegetables</button>
+        <button onclick="FilterItems('Beverages')">Beverages</button>
+        <button onclick="FilterItems('Bakery')">Bakery</button>
+    </div>
+    <div id="Totals">
+        <p>Total Items:<span id="TotalItems">0</span></p>
+        <p>Total Cost: $<span id="TotalCost">0.00</span></p>
+    </div>
+    <ul id="ItemList"></ul>
+    <div id="undoToast" style="display:none;">
+        <p>Item removed. <button onclick="UndoRemove()">Undo</button></p>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
