@@ -47,7 +47,7 @@ Open the app: https://healthytrackerr.netlify.app/
 / (project root)
 ├─ index.html
 ├─ styles.css        # Tailwind output or custom CSS
-├─ app.js            # Main JavaScript logic
+├─ script.js            # Main JavaScript logic
 └─ README.md
 ```
 
@@ -60,7 +60,7 @@ Open the app: https://healthytrackerr.netlify.app/
 1. Clone the repository:
 
 ```bash
-git clone <your-repo-url>
+git clone <https://github.com/manishapal06/My-projects.git>
 cd healthy-habit-tracker
 ```
 
